@@ -87,11 +87,11 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	.container-grid {
 		overflow: hidden;
 		background-image: url(images/bg-intro-mobile.png);
-		max-width: 375px;
+		max-width: 750px;
 		height: auto;
 		grid-template-columns: 1fr;
 		gap: 2rem;
@@ -112,7 +112,7 @@ body {
 	font-size: 1rem;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	.right-container {
 		max-width: 327px;
 	}
@@ -138,7 +138,7 @@ fieldset {
 	box-sizing: border-box;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	fieldset {
 		margin-bottom: 2rem;
 	}
@@ -152,7 +152,7 @@ form p {
 	font-size: 0.75rem;
 	color: var(--clr-neutral-700);
 }
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	form p {
 		text-align: center;
 	}
@@ -172,7 +172,7 @@ input {
 	letter-spacing: 0.0625rem;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	input {
 		padding: 1rem;
 	}
@@ -200,7 +200,7 @@ input:focus {
 	margin-top: 2.25rem;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	.btn--primary {
 		margin: 0;
 		width: 100%;
@@ -223,7 +223,7 @@ input:focus {
 	margin-bottom: 1.25rem;
 	letter-spacing: 1px;
 }
-@media (min-width: 375px) {
+@media (max-width: 750px) {
 	.btn--accent {
 		max-width: 20.5rem;
 		word-wrap: break-word;
