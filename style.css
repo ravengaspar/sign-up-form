@@ -1,4 +1,4 @@
-root {
+:root {
 	/* Primary Colors */
 
 	--clr-primary-900: hsl(0, 100%, 74%);
@@ -87,6 +87,17 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+@media (min-width: 375px) {
+	.container-grid {
+		overflow: hidden;
+		background-image: url(images/bg-intro-mobile.png);
+		max-width: 375px;
+		height: auto;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+}
+
 .left-container {
 	color: white;
 }
@@ -94,13 +105,31 @@ body {
 .right-container {
 	max-width: 33.75rem;
 }
-
 .heading {
 	font-size: 3.5rem;
 }
 .subheading {
 	font-size: 1rem;
 }
+
+@media (min-width: 375px) {
+	.right-container {
+		max-width: 327px;
+	}
+
+	.heading {
+		margin-top: 5.625rem;
+		margin-bottom: 2rem;
+		font-size: 1.75rem;
+		text-align: center;
+	}
+	.subheading {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+}
+
 fieldset {
 	background: white;
 	border: 0 none;
@@ -108,6 +137,13 @@ fieldset {
 	box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
 }
+
+@media (min-width: 375px) {
+	fieldset {
+		margin-bottom: 2rem;
+	}
+}
+
 form {
 	margin: 3.125rem 2.75rem;
 }
@@ -115,6 +151,11 @@ form {
 form p {
 	font-size: 0.75rem;
 	color: var(--clr-neutral-700);
+}
+@media (min-width: 375px) {
+	form p {
+		text-align: center;
+	}
 }
 
 .terms {
@@ -129,6 +170,12 @@ input {
 	margin-bottom: 1.75rem;
 	font-weight: var(--fw-600);
 	letter-spacing: 0.0625rem;
+}
+
+@media (min-width: 375px) {
+	input {
+		padding: 1rem;
+	}
 }
 
 input:focus {
@@ -153,6 +200,14 @@ input:focus {
 	margin-top: 2.25rem;
 }
 
+@media (min-width: 375px) {
+	.btn--primary {
+		margin: 0;
+		width: 100%;
+		margin-bottom: 0.75rem;
+	}
+}
+
 .btn--primary:hover {
 	background: var(--clr-primary-600);
 }
@@ -167,6 +222,14 @@ input:focus {
 	height: 3.75rem;
 	margin-bottom: 1.25rem;
 	letter-spacing: 1px;
+}
+@media (min-width: 375px) {
+	.btn--accent {
+		max-width: 20.5rem;
+		word-wrap: break-word;
+
+		padding-inline: 5rem;
+	}
 }
 
 form .field {
