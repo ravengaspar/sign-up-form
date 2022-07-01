@@ -1,35 +1,34 @@
-const form = document.querySelector('form');
-const firstName = form.querySelector('.firstName');
-const lastName = form.querySelector('.lastName');
-const email = form.querySelector('.email');
-const password = form.querySelector('.password');
-const primaryBtn = document.querySelector('.btn--primary');
+const form = document.querySelector('.form');
+const formControl = form.querySelectorAll('.form-control');
+
+function checkInputs(e) {
+	e.preventDefault();
+	const target = e.target;
+	const input = target.closest('input');
+	const formControl = target.closest('.form-control');
+
+	formControl.classList.remove('error', 'success');
+
+	if (input.value === '') {
+		const label = input.previousElementSibling.textContent;
+		const errorLabel = input.parentElement.lastElementChild;
+
+		errorLabel.textContent = `${label} cannot be blank`;
+		formControl.classList.add('error');
+	}
+}
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-
-	if (firstName.value === '') {
-		firstName.parentNode.children[1].classList.add('error');
-		firstName.parentNode.children[2].classList.add('error');
-		firstName.classList.add('error');
-		firstName.setAttribute('placeholder', '');
-	}
-	if (lastName.value === '') {
-		lastName.parentNode.children[1].classList.add('error');
-		lastName.parentNode.children[2].classList.add('error');
-		lastName.classList.add('error');
-		lastName.setAttribute('placeholder', '');
-	}
-	if (email.value === '') {
-		email.parentNode.children[1].classList.add('error');
-		email.parentNode.children[2].classList.add('error');
-		email.classList.add('error');
-		email.setAttribute('placeholder', '');
-	}
-	if (password.value === '') {
-		password.parentNode.children[1].classList.add('error');
-		password.parentNode.children[2].classList.add('error');
-		password.classList.add('error');
-		password.setAttribute('placeholder', '');
-	}
+	const inputs = document.querySelectorAll('input');
+	inputs.forEach((input) => {
+		if (input.value === '') {
+			const label = input.previousElementSibling.textContent;
+			const errorLabel = input.parentElement.lastElementChild;
+			errorLabel.textContent = `${label} cannot be blank`;
+			input.parentElement.classList.add('error');
+		}
+	});
 });
+
+formControl.forEach((form) => form.addEventListener('focusout', (e) => checkInputs(e)));

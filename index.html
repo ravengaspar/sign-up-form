@@ -32,37 +32,42 @@
 				<button class="btn--accent">
 					<span class="fw-bold">Try it free 7 Days</span> then $20/mo. thereafter
 				</button>
-				<fieldset>
-					<form action="#">
-						<div class="field">
-							<div class="input-area">
-								<input type="text" placeholder="First Name" class="firstName" />
-								<span class="warning-icon"></span>
-								<div class="error-text fw-regular">First Name cannot be empty</div>
-							</div>
-							<div class="input-area">
-								<input type="text" placeholder="Last Name" class="lastName" />
-								<span class="warning-icon"></span>
-								<div class="error-text fw-regular">Last Name cannot be empty</div>
-							</div>
-							<div class="input-area">
-								<input type="email" placeholder="Email Address" class="email" />
-								<span class="warning-icon"></span>
-								<div class="error-text fw-regular">Email Address cannot be empty</div>
-							</div>
-							<div class="input-area">
-								<input type="password" placeholder="Password" class="password" />
-								<span class="warning-icon"></span>
-								<div class="error-text fw-regular">Password cannot be empty</div>
-							</div>
-						</div>
-						<button class="btn--primary uppercase fw-bold">Claim your free trial</button>
-						<p>
-							By clicking the button you are agreeing to our
-							<span class="terms fw-bold">Terms and Services</span>
-						</p>
-					</form>
-				</fieldset>
+
+				<form action="#" class="form" id="form">
+					<div class="form-control">
+						<label>First Name</label>
+						<input type="text" placeholder="First Name" />
+						<i class="warning-icon"></i>
+						<small>Error Message</small>
+					</div>
+
+					<div class="form-control">
+						<label>Last Name</label>
+						<input type="text" placeholder="Last Name" />
+						<i class="warning-icon"></i>
+						<small>Error Message</small>
+					</div>
+
+					<div class="form-control">
+						<label>Email</label>
+						<input type="email" placeholder="hello@raveun.com" id="email" />
+						<i class="warning-icon"></i>
+						<small>Error Message</small>
+					</div>
+
+					<div class="form-control">
+						<label>Password</label>
+						<input type="password" placeholder="Password" id="password" />
+						<i class="warning-icon"></i>
+						<small>Error Message</small>
+					</div>
+
+					<button class="btn--primary uppercase fw-bold">Claim your free trial</button>
+					<p class="fw-regular">
+						By clicking the button you are agreeing to our
+						<span class="terms fw-semibold">Terms and Services</span>
+					</p>
+				</form>
 			</div>
 		</div>
 	</body>
